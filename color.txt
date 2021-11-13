@@ -1,0 +1,8 @@
+Bg: #111418
+textColor: #ffffff
+iconColor: #000000
+Button: #a85ff1
+
+
+
+dropdawn__btn flex items-center px-1 space-x-1  py-1
