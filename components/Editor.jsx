@@ -1,10 +1,10 @@
 import React from "react";
 
-function Ediror() {
+function Editor() {
   return (
     <>
     </>
   );
 }
 
-export default Ediror;
+export default Editor;

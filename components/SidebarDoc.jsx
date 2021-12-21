@@ -11,14 +11,21 @@ import {
 } from "react-icons/vsc";
 import { AiFillFolder, AiFillFolderOpen } from "react-icons/ai";
 import { RiReactjsLine } from "react-icons/ri";
+import Link from "next/link";
 
-function SidebarSec({open, setOpen}) {
+function SidebarSec({ open, setOpen }) {
   const [activeDrpd, setActiveDrpd] = useState(false);
   const [activeMy_app, setActiveMy_app] = useState(false);
   const [activeSrc, setActiveSrc] = useState(false);
 
   return (
-    <div className={open ? "w-64 bg-gray-900 cursor-pointer border-r border-gray-600" : "hidden"}>
+    <div
+      className={
+        open
+          ? "w-64 bg-gray-900 cursor-pointer border-r border-gray-600"
+          : "hidden"
+      }
+    >
       <div className="px-4 py-2 text-gray-500 flex items-center justify-between">
         <h5 className="uppercase text-sm">Explorer</h5>
         <BsThreeDots className="cursor-pointer w-6 h-6 p-1 rounded-md hover:bg-gray-300 hover:bg-opacity-10 transition-all duration-100 ease-out" />
@@ -37,7 +44,7 @@ function SidebarSec({open, setOpen}) {
             <VscNewFile />
             <VscNewFolder />
             <VscRefresh />
-            <VscCollapseAll />
+            <VscCollapseAll onClick={() => setActiveSrc(!activeSrc)} />
           </div>
         </button>
 
@@ -99,37 +106,60 @@ function SidebarSec({open, setOpen}) {
                         <div className="dropdawn__item">
                           {/* Header folder */}
                           <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-10 py-1">
-                            <div className="flex items-center space-x-1 ">
-                              <RiReactjsLine className="text-blue-500" />
-                              <span className="text-green-500">
-                                Header.jsx
-                              </span>
-                            </div>
+                            <Link href="/about">
+                              <a className="flex items-center space-x-1 ">
+                                <RiReactjsLine className="text-blue-500" />
+                                <span className="text-green-500">
+                                  About.jsx
+                                </span>
+                              </a>
+                            </Link>
                             <p className="text-blue-500"> U </p>
                           </div>
 
                           {/* Main folder */}
                           <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-10 py-1">
-                            <div className="flex items-center space-x-1 ">
-                              <RiReactjsLine className="text-blue-500" />
-                              <span className="text-green-500">Main.jsx</span>
-                            </div>
+                            <Link href="/projects">
+                              <a className="flex items-center space-x-1 ">
+                                <RiReactjsLine className="text-blue-500" />
+                                <span className="text-green-500">
+                                  Projects.jsx
+                                </span>
+                              </a>
+                            </Link>
                             <p className="text-blue-500"> U </p>
                           </div>
 
                           {/* Footer folder */}
                           <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-10 py-1">
-                            <div className="flex items-center space-x-1 ">
-                              <RiReactjsLine className="text-blue-400" />
-                              <span className="text-green-500">Footer.jsx</span>
-                            </div>
+                            <Link href="/contact">
+                              <a className="flex items-center space-x-1 ">
+                                <RiReactjsLine className="text-blue-400" />
+                                <span className="text-green-500">
+                                  Contact.jsx
+                                </span>
+                              </a>
+                            </Link>
+                            <p className="text-blue-500"> U </p>
+                          </div>
+
+                          {/* Footer folder */}
+                          <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-10 py-1">
+                            <Link href="/github">
+                              <a className="flex items-center space-x-1 ">
+                                <RiReactjsLine className="text-blue-400" />
+                                <span className="text-green-500">
+                                  GitHub.jsx
+                                </span>
+                              </a>
+                            </Link>
                             <p className="text-blue-500"> U </p>
                           </div>
                         </div>
                       </div>
                     )}
 
-                    {/* pacage-json file */}
+                    {/* package-json file */}
                     <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-6 py-1">
                       <div className="flex items-center space-x-1 ">
                         <VscJson className="text-yellow-200" />
@@ -138,7 +168,7 @@ function SidebarSec({open, setOpen}) {
                       <p className="text-blue-500"> M </p>
                     </div>
 
-                    {/* pacage-json file */}
+                    {/* package-json file */}
                     <div className="flex items-center justify-between text-gray-500 hover:bg-gray-600 hover:bg-opacity-10 px-4 pl-6 py-1">
                       <div className="flex items-center space-x-1 ">
                         <VscJson className="text-yellow-200" />

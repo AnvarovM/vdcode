@@ -4,7 +4,7 @@ import { VscGitMerge, VscBroadcast, VscBell, VscCloudUpload, VscFeedback, VscErr
 
 function Footer() {
     return (
-        <div className="flex items-center justify-between h-6 px-3 text-white bg-gray-900 border-t border-gray-600 cursor-pointer">
+        <div className="flex items-center justify-between h-6 px-3 py-1 text-white bg-gray-900 border-t border-gray-600 cursor-pointer">
             <div className="flex items-center">
                 <span className="flex items-center"><VscGitMerge className="mx-1" /> main*</span>
                 <span className="flex items-center pl-4"><VscCloudUpload className="mx-1" /></span>

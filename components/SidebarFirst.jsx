@@ -13,28 +13,28 @@ function Sidebar( { open, setOpen, openEx, setOpenEx } ) {
             <div className="flex flex-col justify-between items-center text-gray-600">
                 <div className="flex flex-col">
                     <div onClick={() => setOpen(!open)} className="flex flex-col group">
-                        <a clasclassName="relative group"><VscFiles onClick={() => toggleTab(1)} className={active === 1 ? "activeSidebarBtn" : "sidebarBtn"} /> 
+                        <a className="relative group"><VscFiles onClick={() => toggleTab(1)} className={active === 1 ? "activeSidebarBtn" : "sidebarBtn"} /> 
                         <span className="toolipt group-hover:scale-100">Explorer</span> 
                         </a>
                     </div>
                     <div className="flex flex-col group">
-                    <a clasclassName="relative"><VscSearch onClick={() => toggleTab(2)} className={active === 2 ? "activeSidebarBtn" : "sidebarBtn"} /> 
+                    <a className="relative"><VscSearch onClick={() => toggleTab(2)} className={active === 2 ? "activeSidebarBtn" : "sidebarBtn"} /> 
                         <span className="toolipt group-hover:scale-100">Search</span> 
                         </a>
                     </div>
                     <div className="flex flex-col group">
-                        <a clasclassName="relative"><VscGitMerge  onClick={() => toggleTab(3)} className={active === 3 ? "activeSidebarBtn" : "sidebarBtn"} /> 
+                        <a className="relative"><VscGitMerge  onClick={() => toggleTab(3)} className={active === 3 ? "activeSidebarBtn" : "sidebarBtn"} /> 
                         <span className="toolipt group-hover:scale-100">Control</span> 
                         <p className="number">7</p>
                         </a>
                     </div>
                     <div className="flex flex-col group">
-                        <a clasclassName="relative"><VscDebugAlt onClick={() => toggleTab(4)} className={active === 4 ? "activeSidebarBtn" : "sidebarBtn"} /> 
+                        <a className="relative"><VscDebugAlt onClick={() => toggleTab(4)} className={active === 4 ? "activeSidebarBtn" : "sidebarBtn"} /> 
                         <span className="toolipt group-hover:scale-100">Bugs</span> 
                         </a>
                     </div>
                     <div onClick={() => setOpenEx(!openEx)} className="flex flex-col group">
-                        <a clasclassName="relative"><VscExtensions onClick={() => toggleTab(5)} className={active === 5 ? "activeSidebarBtn" : "sidebarBtn"} /> 
+                        <a className="relative"><VscExtensions onClick={() => toggleTab(5)} className={active === 5 ? "activeSidebarBtn" : "sidebarBtn"} /> 
                             <span className="toolipt group-hover:scale-100">Extention</span> 
                         </a>
                     </div>

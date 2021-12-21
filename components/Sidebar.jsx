@@ -3,7 +3,7 @@ import SidebarFirst from './SidebarFirst'
 import SidebarDoc from './SidebarDoc'
 // import SidebarEx from './SidebarEx'
 
-function Sidedbar() {
+function Sidebar() {
     const [openDoc, setOpenDoc] = useState(false)
     const [openEx, setOpenEx] = useState(false)
     return (
@@ -15,4 +15,4 @@ function Sidedbar() {
     )
 }
 
-export default Sidedbar
+export default Sidebar
